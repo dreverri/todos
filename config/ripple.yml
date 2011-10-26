@@ -1,0 +1,22 @@
+development:
+  http_port: 8098
+  pb_port: 8087
+  host: localhost
+
+dev1:
+  http_port: 8091
+  pb_port: 8081
+  host: localhost
+
+dev4:
+  http_port: 8094
+  pb_port: 8084
+  host: localhost
+
+test:
+  host: localhost
+
+production:
+  http_port: 8098
+  pb_port: 8087
+  host: localhost
