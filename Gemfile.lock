@@ -1,20 +1,20 @@
 GIT
   remote: git://github.com/seancribbs/ripple.git
-  revision: b81bafaefd595aacfadda30a10be9edc39708144
+  revision: e07b1eab96a069be9e01ce48bbc2e4d04bed2a6d
   branch: master
   specs:
-    riak-client (1.0.0.pre)
+    riak-client (1.0.0.beta)
       beefcake (= 0.3.2)
       builder (>= 2.1.2)
       i18n (>= 0.4.0)
       multi_json (~> 1.0.0)
-    riak-sessions (1.0.0.pre)
+    riak-sessions (1.0.0.beta)
       rack (>= 1.0)
-      riak-client (~> 1.0.0.pre)
-    ripple (1.0.0.pre)
+      riak-client (~> 1.0.0.beta)
+    ripple (1.0.0.beta)
       activemodel (>= 3.0.0, < 3.2.0)
       activesupport (>= 3.0.0, < 3.2.0)
-      riak-client (~> 1.0.0.pre)
+      riak-client (~> 1.0.0.beta)
       tzinfo
 
 GEM
