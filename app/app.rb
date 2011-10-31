@@ -42,7 +42,6 @@ end
 class App < Sinatra::Base
   configure do
     enable :logging
-    puts settings.inspect
     config_dir = File.join(File.dirname(__FILE__), '..', 'config')
     Ripple.load_config(config_dir + '/ripple.yml', [settings.environment])
 
