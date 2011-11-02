@@ -23,9 +23,7 @@ Clone the source tree using git:
 
     git clone https://github.com/dreverri/todos.git
 
-This is a Ruby app. If you haven't used RVM, get set up before going farther.
-
-    http://beginrescueend.com/
+This is a Ruby app, so if you haven't used [RVM, get it set up](http://beginrescueend.com) before going farther.
 
 To prepare everything for running, switch to the source tree and run:
 
