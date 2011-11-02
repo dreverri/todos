@@ -41,7 +41,7 @@ Copy the settings file (config/settings.yml.example) to (config/settings.yml).  
 Installing Riak
 ===============
 
-Refer to the [official instructions](http://wiki.basho.com/Installation.html) to Riak running.
+Refer to the [official instructions](http://wiki.basho.com/Installation.html) to get Riak running.
 
 Configure Ripple
 ================
