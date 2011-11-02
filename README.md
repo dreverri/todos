@@ -11,11 +11,11 @@ Getting Started
 
 To run this app, the following steps need to happen:
 
-0)  Get the todo source using git.
-1)  Get Twitter API keys.  These are needed for OAuth.
-2)  Install Riak.
-3)  Configure this app (via Ripple) to use Riak.
-4)  Run!
+1.  Get the todo source using git.
+2.  Get Twitter API keys.  These are needed for OAuth.
+3.  Install Riak.
+4.  Configure this app (via Ripple) to use Riak.
+5.  Run!
 
 Getting the Source
 ==================
