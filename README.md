@@ -20,18 +20,21 @@ To run this app, the following steps need to happen:
 Getting the Source
 ==================
 Clone the source tree using git:
-	git clone https://github.com/dreverri/todos.git
+
+    git clone https://github.com/dreverri/todos.git
 
 This is a Ruby app. If you haven't used RVM, get set up before going farther.
-	http://beginrescueend.com/
+
+    http://beginrescueend.com/
 
 To prepare everything for running, switch to the source tree and run:
-	bundle install
+
+    bundle install
 
 Obtaining Twitter Keys
 ======================
 
-Log into the twitter developer portal (http://dev.twitter.com) and generate some Twitter API keys.  Make sure the Callback URL is correct.  If you plan on runnings under localhost, use something like 'http://127.0.0.1' for the URL.
+Log into the [twitter developer portal](http://dev.twitter.com) and generate some Twitter API keys.  Make sure the Callback URL is correct.  If you plan on runnings under localhost, use something like `http://127.0.0.1` for the URL.
 
 Copy the settings file (config/settings.yml.example) to (config/settings.yml).  Edit it, and insert your twitter API keys from above.  Make sure you use the "Consumer Key" and "Consumer Secret" hashes, not something else.
 
@@ -40,7 +43,7 @@ Installing Riak
 
 Refer to the official instructions to get this running.  It is easy, and shouldn't take long.
 
-	http://wiki.basho.com/Installation.html
+    http://wiki.basho.com/Installation.html
 
 Configure Ripple
 ================
@@ -49,7 +52,9 @@ Edit config/ripple.yml and ensure one of the environments matches your Riak info
 Run
 ===
 Set the environment ripple will use from the config file:
-	export RACK_ENV=<environment>
+
+    export RACK_ENV=<environment>
 
 Use bundle to run the app & pick the TCP port you want Sinatra to use:
-	bundle exec rackup -p 4567
+
+    bundle exec rackup -p 4567
