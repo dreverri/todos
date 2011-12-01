@@ -1,4 +1,4 @@
 rvm_gemset_create_on_use_flag=1
 rvm_trust_rvmrcs_flag=1
 
-rvm ruby-1.9.2-p180@todo
+rvm ruby-1.9.2-p290@todo

@@ -24,7 +24,7 @@ $(function(){
     toggle: function() {
       this.save({done: !this.get("done")});
     }
-
+ 
   });
 
   // Todo Collection
@@ -44,6 +44,17 @@ $(function(){
     // Filter down the list of all todo items that are finished.
     done: function() {
       return this.filter(function(todo){ return todo.get('done'); });
+    },
+
+    // Locate the first todo found which matches the supplied text
+    findByText: function(text) {
+      return this.find(
+        function(todo) {
+          if (text == todo.get('text'))
+            return todo;
+          else
+            return null;
+        })      
     },
 
     // Filter down the list to only todo items that are still not finished.
@@ -224,6 +235,39 @@ $(function(){
       if (val == '' || val == this.input.attr('placeholder')) return;
       var show = function(){ tooltip.show().fadeIn(); };
       this.tooltipTimeout = _.delay(show, 1000);
+    },
+
+    sortOnDrop: function() {
+      var todo_list = $(".todo");
+      var todo_text = $(".todo-text");
+
+      var saves = new Array();
+
+      for (i = 0; i < todo_list.length; i++) {
+        var todo_elm = todo_text[i].textContent;
+        var j = window.Todos.findByText(todo_elm);
+        current = j.get('order');
+        next = i + 1;
+        
+        /* Nice to use this to see what the client is sending to the DB.
+        console.log("New List: " + todo_elm);
+        console.log("text: " + j.get('text') + ", current: " + current + ", next: " + next);
+        */
+
+        // record the time of the todo update as part of the set.
+        // separate the act of marking a save from doing it.
+        j.set({order: next, update: new Date().getTime()});
+        if (next != current) {
+            saves.push(j);
+        }
+      }
+      // push all the saves out at once
+      for (i = 0; i < saves.length; i++) {
+          saves[i].save();
+          /* verify order in console
+          console.log(saves[i].get('order'));
+          */
+      }
     }
 
   });

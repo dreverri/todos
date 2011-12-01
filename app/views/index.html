@@ -2,10 +2,21 @@
   <head>
     <link href="todos.css" media="all" rel="stylesheet" type="text/css">
     <script src="json2.js"></script>
-    <script src="jquery-1.5.js"></script>
+
+    <!-- JQuery & UI Deps -->    
+    <script src="jquery-1.6.2.min.js"></script>
+    <script src="ui/jquery.ui.core.js"></script>
+    <script src="ui/jquery.ui.widget.js"></script>
+    <script src="ui/jquery.ui.mouse.js"></script>
+    <script src="ui/jquery.ui.sortable.js"></script>
+
+    <!-- Structure & Templating -->
     <script src="underscore-1.1.6.js"></script>
     <script src="backbone.js"></script>
+
+    <!-- Todo App -->
     <script src="todos.js"></script>
+
     <style type='text/css'>
       textarea {
       height:500px;
@@ -19,6 +30,23 @@
       margin: 10px auto;
       }
     </style>
+    <!-- Hook todo-list to jquery / sortable -->
+    <script>
+        // use event.target to gain access to the list, could also use jquery $(#todo-list)
+        // use the event.srcElement to gain access to what changed.
+        // figure out how to interact with the todo model, and persist new order
+        $(function() {
+            $( "#todo-list" ).bind( "sortupdate",
+                function(event, ui) {
+                    window.App.sortOnDrop();
+                }
+            );
+            $( "#todo-list" ).sortable({
+                //update: function(event, ui) { getOrder(event, ui); }
+            });
+            $( "#todo-list" ).disableSelection();
+        });
+    </script>
   </head>
   <body>
     <!-- Todo App Interface -->
@@ -40,7 +68,6 @@
         </div>
 
         <div id="todo-stats">
-          
           
         </div>
 
