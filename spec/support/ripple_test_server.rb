@@ -23,6 +23,6 @@ RSpec.configure do |config|
   end
 
   config.after(:each) do
-    #$test_server.destroy
+    $test_server.drop
   end
 end
