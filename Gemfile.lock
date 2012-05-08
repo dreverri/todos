@@ -1,20 +1,32 @@
 GIT
-  remote: git://github.com/seancribbs/ripple.git
-  revision: e07b1eab96a069be9e01ce48bbc2e4d04bed2a6d
-  branch: master
+  remote: git://github.com/basho/riak-ruby-client.git
+  revision: 7146d04bccc6b49266137ad60a7a996a63318297
+  ref: 7146d04bccc6b49266137ad60a7a996a63318297
   specs:
-    riak-client (1.0.0.beta)
-      beefcake (= 0.3.2)
+    riak-client (1.0.3)
+      beefcake (~> 0.3.7)
       builder (>= 2.1.2)
       i18n (>= 0.4.0)
-      multi_json (~> 1.0.0)
+      multi_json (~> 1.0)
+
+GIT
+  remote: git://github.com/seancribbs/riak-sessions.git
+  revision: 6b4950dc3d611bd6bb3cc87a9242878513bc9774
+  ref: 6b4950dc3d611bd6bb3cc87a9242878513bc9774
+  specs:
     riak-sessions (1.0.0.beta)
       rack (>= 1.0)
-      riak-client (~> 1.0.0.beta)
+      riak-client (~> 1.0.0)
+
+GIT
+  remote: git://github.com/seancribbs/ripple.git
+  revision: b6b370876d398e36f45009c28d4912d17b2cf883
+  ref: b6b370876d398e36f45009c28d4912d17b2cf883
+  specs:
     ripple (1.0.0.beta)
-      activemodel (>= 3.0.0, < 3.2.0)
-      activesupport (>= 3.0.0, < 3.2.0)
-      riak-client (~> 1.0.0.beta)
+      activemodel (>= 3.0.0, < 3.3.0)
+      activesupport (>= 3.0.0, < 3.3.0)
+      riak-client (~> 1.0.0)
       tzinfo
 
 GEM
@@ -22,14 +34,14 @@ GEM
   specs:
     XMLCanonicalizer (1.0.1)
       log4r (>= 1.0.4)
-    activemodel (3.1.1)
-      activesupport (= 3.1.1)
+    activemodel (3.2.3)
+      activesupport (= 3.2.3)
       builder (~> 3.0.0)
+    activesupport (3.2.3)
       i18n (~> 0.6)
-    activesupport (3.1.1)
       multi_json (~> 1.0)
     addressable (2.2.6)
-    beefcake (0.3.2)
+    beefcake (0.3.7)
     builder (3.0.0)
     diff-lcs (1.1.3)
     faraday (0.7.5)
@@ -115,7 +127,7 @@ GEM
       tilt (~> 1.3, >= 1.3.3)
     systemu (2.2.0)
     tilt (1.3.3)
-    tzinfo (0.3.30)
+    tzinfo (0.3.33)
     uuid (2.3.4)
       macaddr (~> 1.0)
 

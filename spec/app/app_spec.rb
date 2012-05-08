@@ -4,8 +4,8 @@ describe User do
   before do
     User.bucket.allow_mult=true
   end
-  
-  it 'should resolve conflicting todos' do
+
+  it 'should be able to save a todo' do
     u = User.create! :todos => []
 
     u1 = User.find(u.key)
@@ -13,10 +13,7 @@ describe User do
 
     u1.todos = [{'id' => 'foo'}]
     u1.save
-    
-    u2.todos = [{'id' => 'bar'}]
-    u2.save!
 
-    User.find(u.key).todos.map { |t| t['id'] }.sort.should == ['bar', 'foo']
+    User.find(u.key).todos.map { |t| t['id'] }.sort.should == ['foo']
   end
 end
